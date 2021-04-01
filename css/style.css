@@ -6,10 +6,6 @@
     scroll-behavior: smooth;
 }
 
-body{
-    overflow: hidden;
-}
-
 .grid {
     display: grid;
     grid-template-columns:  18% 82%;
@@ -134,6 +130,15 @@ a:after {
     color: #fff;
 }
 
+.name{
+    animation: floatyword;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: inline-block;
+    color: #17A4FF;
+}
+
 /* page compétence */
 .skills-section{
     height: 100vh;
@@ -193,7 +198,7 @@ a:after {
     left: 80%;
     top: 10%;
     transform: rotatey(180deg);
-    animation: floaty;
+    animation: scale;
     animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -234,6 +239,26 @@ a:after {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
+}
+
+.star{
+    left: 65%;
+    top: 10%;
+    width: 3% !important;
+    animation: scale;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.star1{
+    left: 65%;
+    top: 85%;
+}
+
+.star2{
+    left: 30%;
+    top: 45%;
 }
 
 .rocket{
@@ -295,5 +320,30 @@ a:after {
 	}
 	100% {
 		transform: translateX(0px);
+	}
+}
+
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes floatyword {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-7px);
+	}
+	100% {
+		transform: translatey(0px);
 	}
 }
