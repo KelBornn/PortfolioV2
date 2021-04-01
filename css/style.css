@@ -6,6 +6,10 @@
     scroll-behavior: smooth;
 }
 
+body{
+    overflow: hidden;
+}
+
 .grid {
     display: grid;
     grid-template-columns:  18% 82%;
@@ -189,31 +193,44 @@ a:after {
     left: 80%;
     top: 10%;
     transform: rotatey(180deg);
+    animation: floaty;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .jupiter{
     left:40%;
     top: 75%;
+    animation: floaty;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .neptune{
     left: 7%;
     top: 30%;
+    animation: floaty;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .cloud{
     left: 20%;
     top: -2%;
     animation: floatx;
+    animation-duration: 7s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-
 }
 
 .cloud2{
     left: 65%;
     top: 40%;
     animation: floatx;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
@@ -224,7 +241,7 @@ a:after {
     left: 47%;
     top: 47%;
     animation: floaty;
-    animation-duration: 4s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -239,8 +256,21 @@ a:after {
 }
 
 @media(max-width: 500px) {
+
+    .propos p{
+        font-size: 15px;
+        line-height: 25px;
+        text-align: justify;
+    }
+    .parapropos{
+        width: 90%;
+    }
     .skills-section{
-        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .skill{
+        width: 100%;
     }
 }
 
