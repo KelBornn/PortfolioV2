@@ -1,0 +1,269 @@
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns:  18% 82%;
+    grid-template-areas:
+    "header .content"
+  }
+
+
+/* Header avec css grid de 18% */
+header{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    color: black;
+    background-color: #fdfdfd;
+    position: relative;
+}
+
+nav{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+h1{
+    font-size: 35px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+ul li{
+    list-style: none;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+header img{
+    position: absolute;
+    top: -60%;
+    transform: translateY(-60%);
+    width: 60%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20%;
+    box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.50);
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    position: relative;
+}
+
+/* Underline au hover pour les liens du header*/
+a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+  /* personalisation de icons */
+  ion-icon{
+    color: black;
+    font-size: 35px;
+  }
+
+  .icons{
+      position: absolute;
+      top: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      width: 70%;
+      padding-top: 50px;
+  }
+
+/* Contenu de la page */
+
+/* Première page de présentation */
+.propos{
+    height: 100vh;
+    background: url("../static/john-towner-JgOeRuGD_Y4-unsplash.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.propos h1{
+    font-size: 50px;
+    color: #fff;
+
+}
+
+.parapropos{
+    width: 70%;
+}
+
+.parapropos p{
+    font-size: 23px;
+    line-height: 45px;
+    font-weight: 300;
+    color: #fff;
+}
+
+/* page compétence */
+.skills-section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #0A172A;
+    background: linear-gradient(#010101, #0A172A);
+    position: relative;
+    z-index: 0;
+}
+
+.skill-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    width: 80%;
+}
+
+.skill{
+    width: 45%;
+    color: #fff;
+    display: inline-block;
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+
+.skill h3{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.skill p{
+    font-size: 20px;
+    text-align: justify;
+    font-weight: 300;
+}
+
+.title-skill{
+    display: flex;
+    align-items: center;
+}
+
+.title-skill ion-icon{
+    color: white;
+    padding-right: 10px;
+}
+
+.skills-section img{
+    width: 12%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+}
+
+.moon{
+    left: 80%;
+    top: 10%;
+    transform: rotatey(180deg);
+}
+
+.jupiter{
+    left:40%;
+    top: 75%;
+}
+
+.neptune{
+    left: 7%;
+    top: 30%;
+}
+
+.cloud{
+    left: 20%;
+    top: -2%;
+    animation: floatx;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.cloud2{
+    left: 65%;
+    top: 40%;
+    animation: floatx;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.rocket{
+    width: 5% !important;
+    left: 47%;
+    top: 47%;
+    animation: floaty;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@media(max-width: 728px) {
+    .grid {
+        display: block;
+    }
+    header{
+        display: none;
+    }
+}
+
+@media(max-width: 500px) {
+    .skills-section{
+        display: flex;
+    }
+}
+
+@keyframes floaty {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes floatx {
+	0% {
+		transform: translateX(0px);
+	}
+	50% {
+		transform: translateX(-20px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
