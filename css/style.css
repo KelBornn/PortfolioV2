@@ -116,7 +116,9 @@ a:after {
 .propos h1{
     font-size: 50px;
     color: #fff;
-
+    font-weight: 500;
+    font-style: normal;
+    display: inline-block;
 }
 
 .parapropos{
@@ -127,12 +129,13 @@ a:after {
     font-size: 23px;
     line-height: 45px;
     font-weight: 300;
+    letter-spacing: 3px;
     color: #fff;
 }
 
 .name{
     animation: floatyword;
-    animation-duration: 2.5s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     display: inline-block;
@@ -271,6 +274,188 @@ a:after {
     animation-timing-function: linear;
 }
 
+/* page projets */
+.projet{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    background-color: #0A172A;
+}
+
+.projet1 ,.projet2{
+    width: 28%;
+    height: 35vh;
+    position: relative;
+}
+
+.projet img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+
+}
+
+.cover{
+    position: absolute;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.cover h3{
+    font-family: poppins;
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+}
+
+.cover:hover{
+    opacity: 0;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+/* Page Stage */
+.stage{
+    width: 100%;
+    display: flex;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2%;
+    background-color: #0A172A;
+    color: white;
+}
+
+.stage p{
+    padding: 0;
+    font-size: 21px;
+    width: 60%;
+}
+
+.stage img{
+    width: 500px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.mission{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+    background-color: #0A172A;
+    color: white;
+
+}
+
+.mission article{
+    height: 30%;
+    width:60%;
+    margin: auto;
+}
+
+.mission p{
+    font-size: 20px;
+    padding-top: 0;
+    text-align: justify;
+}
+
+.title-mission{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 2%;
+}
+
+.title-mission ion-icon{
+    font-size:32px;
+    color: grey;
+}
+
+.mission h3{
+    font-family: Poppins;
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    padding-left: 5px;
+
+}
+
+/* page de veille */
+.veille{
+    margin: auto;
+    height: 100vh;
+    width: 100%;
+    background-color: #0A172A;
+    color: #fff;
+}
+
+.veillecontent{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    height: 100%;
+    width: 65%;
+}
+
+.veillintro{
+    font-weight: normal;
+}
+
+.ccl-veille{
+    display: flex;
+    justify-content: center;
+    max-width: 60%;
+    margin: auto;
+    background-color: #0A172A;
+}
+
+.ccl-veille p{
+    font-weight: normal;
+}
+
+.integration{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30%;
+}
+
+.vod2{
+    flex-direction: row-reverse;
+}
+
+.integration p{
+    max-width: 45%;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.integration iframe{
+    max-width: 45%;
+}
+
+.resume{
+    width: 60%;
+}
+
+.veillintro{
+    width: 60%;
+    margin: auto;
+}
+
 @media(max-width: 728px) {
     .grid {
         display: block;
@@ -281,7 +466,6 @@ a:after {
 }
 
 @media(max-width: 500px) {
-
     .propos p{
         font-size: 15px;
         line-height: 25px;
@@ -340,10 +524,16 @@ a:after {
 	0% {
 		transform: translatey(0px);
 	}
-	50% {
-		transform: translatey(-7px);
+    25% {
+		transform: translatey(4px);
 	}
-	100% {
+	50% {
 		transform: translatey(0px);
 	}
+    75% {
+		transform: translatey(-4px);
+	}
+    100%{
+        transform: translatey(0px);
+    }
 }
