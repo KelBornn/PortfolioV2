@@ -13,7 +13,10 @@
     "header .content"
   }
 
+.content{
+    background: linear-gradient(#010101 35%, #4f9bd9) !important;
 
+}
 /* Header avec css grid de 18% */
 header{
     display: flex;
@@ -147,8 +150,6 @@ a:after {
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: #0A172A;
-    background: linear-gradient(#010101, #0A172A);
     position: relative;
     z-index: 0;
 }
@@ -225,24 +226,7 @@ a:after {
     animation-timing-function: linear;
 }
 
-.cloud{
-    left: 20%;
-    top: -2%;
-    animation: floatx;
-    animation-duration: 7s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
 
-.cloud2{
-    left: 65%;
-    top: 40%;
-    animation: floatx;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-
-}
 
 .star{
     left: 65%;
@@ -279,8 +263,7 @@ a:after {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 100vh;
-    background-color: #0A172A;
+    height: 70vh;
 }
 
 .projet1 ,.projet2{
@@ -330,8 +313,74 @@ a:after {
     flex-direction: column;
     align-items: center;
     padding-bottom: 2%;
-    background-color: #0A172A;
     color: white;
+    position: relative;
+}
+
+.cloud{
+    all: unset;
+    left: 3%;
+    top: -20%;
+    animation: floatx;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: 12% !important;
+    height: auto !important;
+    position: absolute;
+    z-index: 0;
+}
+
+.cloud2{
+    left: 85%;
+    top: 80%;
+    animation: floatx;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: 12% !important;
+    height: auto !important;
+    position: absolute;
+    z-index: 0;
+}
+
+.plane{
+    left: 5%;
+    top: 130%;
+    animation: plane;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: 8% !important;
+    height: auto !important;
+    position: absolute;
+    z-index: 0;
+}
+
+.kite{
+    left: 85%;
+    top: 200%;
+    animation: kite;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: 8% !important;
+    height: auto !important;
+    position: absolute;
+    z-index: 0;
+}
+
+.pigeon{
+    left: 5%;
+    top: 300%;
+    animation: pigeon;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: 8% !important;
+    height: auto !important;
+    position: absolute;
+    z-index: 0;
 }
 
 .stage p{
@@ -353,7 +402,6 @@ a:after {
     width: 100%;
     margin: auto;
     padding-bottom: 20px;
-    background-color: #0A172A;
     color: white;
 
 }
@@ -396,9 +444,21 @@ a:after {
     margin: auto;
     height: 100vh;
     width: 100%;
-    background-color: #0A172A;
     color: #fff;
+    padding-top: 2.5%;
+    position: relative;
 }
+
+.veille p{
+    font-size: 20px;
+}
+
+/* .veille img{
+    width: 12%;
+    height: auto;
+    position: absolute;
+    z-index: 0;
+} */
 
 .veillecontent{
     display: flex;
@@ -412,14 +472,13 @@ a:after {
 
 .veillintro{
     font-weight: normal;
+    margin: auto;
 }
 
 .ccl-veille{
     display: flex;
     justify-content: center;
-    max-width: 60%;
     margin: auto;
-    background-color: #0A172A;
 }
 
 .ccl-veille p{
@@ -449,11 +508,6 @@ a:after {
 
 .resume{
     width: 60%;
-}
-
-.veillintro{
-    width: 60%;
-    margin: auto;
 }
 
 @media(max-width: 728px) {
@@ -492,6 +546,50 @@ a:after {
 	}
 	100% {
 		transform: translatey(0px);
+	}
+}
+
+@keyframes plane {
+	0% {
+		transform: translate3d(0px, 0px, 0px);
+
+	}
+	50% {
+        transform: translate3d(-20px, 30px, 0px);
+
+	}
+	100% {
+        transform: translate3d(0px, 0px, 0px);
+	}
+}
+
+
+@keyframes kite {
+	0% {
+		transform: translate3d(0px, 0px, 0px);
+
+	}
+	50% {
+        transform: translate3d(-30px, 30px, 0px);
+
+	}
+	100% {
+        transform: translate3d(0px, 0px, 0px);
+	}
+}
+
+
+@keyframes pigeon {
+	0% {
+		transform: translate3d(0px, 0px, 0px);
+
+	}
+	50% {
+        transform: translate3d(0px, 15px, 0px);
+
+	}
+	100% {
+        transform: translate3d(0px, 0px, 0px);
 	}
 }
 
