@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <!-- AnimeJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <title>Portfolio</title>
+</head>
+
+<body onload=bonsoir()>
+    <div class="grid">
+        <header>
+            <nav>
+                <img src="static/IMG_20210109_142332.jpg" alt="">
+                <h1>Bryan Authiat</h1>
+                <ul>
+                    <li><a href="#propos">A Propos</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#projet">Projets</a></li>
+                    <li><a href="#stage">Stage</a></li>
+                    <li><a href="#veille">Veille</a></li>
+                </ul>
+                <ul class="icons">
+                    <li><a href="">
+                            <ion-icon name="logo-gitlab"></ion-icon>
+                        </a></li>
+                    <li><a href="">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </a></li>
+                    <li><a href="">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <div class="projetwindowspropos">
+                <img src="static/cloud.svg" class="cloud" alt="">
+                <img src="static/cloud.svg" class="cloud2" alt="">
+                <img src="static/asteroid.svg" class="neptune" alt="">
+                <img src="static/jupiter.svg" class="jupiter" alt="">
+                <img src="static/shining.svg" class="star" alt="">
+                <img src="static/shining.svg" class="star star1" alt="">
+                <p>Ce projet avait pour but de relier un serveur linux ou l'on va récolter les logs d'un pc client à
+                    travers divers services notamment CRON et SSH les logs sont stockés sur un fichier gérer
+                    automatiquement tous les samedi et se supprime après une date de péremption défini.</p>
+                <img src="static/Windows-Server-Logo.png" alt="">
+            </div>
+            <div class="projetdescription">
+                <p>Nous avons installé deux machines Linux, une qui reçoit les logs en provenance de l’autre machine et
+                    une machine cliente sur laquelle on va ouvrir une porte pour communiquer avec les serveurs de logs.
+                </p>
+                <img src="static/Windows-Server-Logo.png" alt="">
+                <p>Avec le service Cron on peut automatiser ce que l’on veut comme la copie d’un fichier, sa suppression
+                    ou juste lancer la récolte de log via le lancement d’un script.</p>
+                <img src="static/Windows-Server-Logo.png" alt="">
+                <p>Nous avons ensuite configurer l’autre machine pour quel communique avec le serveur de log avec le
+                    fichier host.
+                </p>
+            </div>
+        </div>
+</body>
+
+</html>

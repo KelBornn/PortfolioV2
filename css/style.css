@@ -14,7 +14,7 @@
   }
 
 .content{
-    background: linear-gradient(#010101 35%, #4f9bd9) !important;
+    background: linear-gradient(#010101 5%, #4f9bd9) !important;
 
 }
 /* Header avec css grid de 18% */
@@ -508,6 +508,97 @@ a:after {
 
 .resume{
     width: 60%;
+}
+
+/* page windows */
+.projetwindowspropos{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.projetwindowspropos p{
+    color: white;
+    text-align: justify;
+    margin: auto;
+    max-width: 40%;
+    font-size: 23px;
+}
+
+.projetwindowspropos img{
+        width: 40%;
+        height: 35%;
+}
+
+.projetwindowspropos .cloud{
+    all: unset;
+    left: 70%;
+    top: 78%;
+    animation: floatx;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: 12% !important;
+    height: auto !important;
+    position: absolute;
+    z-index: 0;
+}
+
+.projetwindowspropos .cloud2{
+    all: unset;
+    left: 10%;
+    top: 60%;
+    animation: floatx;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: 12% !important;
+    height: auto !important;
+    position: absolute;
+    z-index: 0;
+}
+
+.projetwindowspropos .star{
+    position: absolute;
+}
+
+.projetwindowspropos .star1{
+    position: absolute;
+    top: 30%;
+    left: 3%;
+}
+
+.projetwindowspropos .star2{
+    position: absolute;
+}
+
+.projetwindowspropos .jupiter{
+    position: absolute;
+    top: 8%;
+    left:80%;
+    width: 12%;
+}
+
+.projetwindowspropos .neptune{
+    position: absolute;
+    top: 0;
+    width: 10%;
+}
+
+.projetdescription{
+    width: 70%;
+    margin: auto;
+}
+
+.projetdescription p{
+    color: white;
+    font-size: 20px;
+
+}
+
+.projetdescription img{
+    width: 70%;
 }
 
 @media(max-width: 728px) {

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <!-- AnimeJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <title>Portfolio</title>
+</head>
+
+<body onload=bonsoir()>
+    <div class="grid">
+        <header>
+            <nav>
+                <img src="static/IMG_20210109_142332.jpg" alt="">
+                <h1>Bryan Authiat</h1>
+                <ul>
+                    <li><a href="#propos">A Propos</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#projet">Projets</a></li>
+                    <li><a href="#stage">Stage</a></li>
+                    <li><a href="#veille">Veille</a></li>
+                </ul>
+                <ul class="icons">
+                    <li><a href="">
+                            <ion-icon name="logo-gitlab"></ion-icon>
+                        </a></li>
+                    <li><a href="">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </a></li>
+                    <li><a href="">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <div class="projetwindowspropos">
+                <img src="static/cloud.svg" class="cloud" alt="">
+                <img src="static/cloud.svg" class="cloud2" alt="">
+                <img src="static/asteroid.svg" class="neptune" alt="">
+                <img src="static/jupiter.svg" class="jupiter" alt="">
+                <img src="static/shining.svg" class="star" alt="">
+                <img src="static/shining.svg" class="star star1" alt="">
+                <p>Ce projet avait pour but de recréer une infrastructure windows server pour une entreprise constituée
+                    de 15 employées et 2 serveurs en redondance. Ce projet à durée 2 mois nos serveur était composé de
+                    différent service comme : DNS, DHCP, AD, WDS, WSUS,...</p>
+                <img src="static/Windows-Server-Logo.png" alt="">
+            </div>
+            <div class="projetdescription">
+                <p>Nous avons installé deux serveurs Windows 2019 un nommé ‘SRV1’ et un nommé ‘SRV2’ en redondance pour
+                    une plus grande sécurité.
+                </p>
+                <img src="static/Windows-Server-Logo.png" alt="">
+                <p>Un service DHCP pour l’attribution des IP à été installé ainsi qu’un service DNS, sans qui le service
+                    AD ne fonctionnerait pas.</p>
+                <img src="static/Windows-Server-Logo.png" alt="">
+                <p>Nous avons ensuite configurer l’Active directory en y ajoutant nos serveur, nos utilisateur, nos gpo
+                    et toutes les règles décrite dans le cahier des charges</p>
+            </div>
+        </div>
+</body>
+
+</html>
