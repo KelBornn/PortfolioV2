@@ -23,14 +23,14 @@
     <div class="grid">
         <header>
             <nav>
-                <img src="static/IMG_20210109_142332.jpg" alt="">
+                <img src="static/IMG_20210109_142332.jpg" onclick="" alt="">
                 <h1>Bryan Authiat</h1>
                 <ul>
-                    <li><a href="#propos">A Propos</a></li>
-                    <li><a href="#skill">Skills</a></li>
-                    <li><a href="#projet">Projets</a></li>
-                    <li><a href="#stage">Stage</a></li>
-                    <li><a href="#veille">Veille</a></li>
+                    <li><a href="index.html#propos">A Propos</a></li>
+                    <li><a href="index.html#skill">Skills</a></li>
+                    <li><a href="index.html#projet">Projets</a></li>
+                    <li><a href="index.html#stage">Stage</a></li>
+                    <li><a href="index.html#veille">Veille</a></li>
                 </ul>
                 <ul class="icons">
                     <li><a href="">
@@ -59,15 +59,11 @@
                 <img src="static/Windows-Server-Logo.png" alt="">
             </div>
             <div class="projetdescription">
-                <p>Nous avons installé deux serveurs Windows 2019 un nommé ‘SRV1’ et un nommé ‘SRV2’ en redondance pour
-                    une plus grande sécurité.
-                </p>
-                <img src="static/Windows-Server-Logo.png" alt="">
-                <p>Un service DHCP pour l’attribution des IP à été installé ainsi qu’un service DNS, sans qui le service
-                    AD ne fonctionnerait pas.</p>
-                <img src="static/Windows-Server-Logo.png" alt="">
-                <p>Nous avons ensuite configurer l’Active directory en y ajoutant nos serveur, nos utilisateur, nos gpo
-                    et toutes les règles décrite dans le cahier des charges</p>
+                <img src="static/image1.png" alt="">
+                <p>Pour que notre annuaire soit bien organisé j'ai créé une OU correspondant à chaque groupe afin de mieux gérer les règles de gestion.</p>
+                <img src="static/image0.png" alt="">
+                <p>Une fois ceci fait il a fallu créer ces fameuses règles de gestion (GPO). Par exemple déployer sur toutes les sessions utilisateur les navigateurs web classique ou alors empêcher l'utilisateur d'accéder à des paramètres à haut risque comme le proxy ou la gestion des logiciels.</p>
+                <img src="static/unnamed.png" alt="">
             </div>
         </div>
 </body>

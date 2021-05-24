@@ -26,11 +26,11 @@
                 <img src="static/IMG_20210109_142332.jpg" alt="">
                 <h1>Bryan Authiat</h1>
                 <ul>
-                    <li><a href="#propos">A Propos</a></li>
-                    <li><a href="#skill">Skills</a></li>
-                    <li><a href="#projet">Projets</a></li>
-                    <li><a href="#stage">Stage</a></li>
-                    <li><a href="#veille">Veille</a></li>
+                    <li><a href="index.html#propos">A Propos</a></li>
+                    <li><a href="index.html#skill">Skills</a></li>
+                    <li><a href="index.html#projet">Projets</a></li>
+                    <li><a href="index.html#stage">Stage</a></li>
+                    <li><a href="index.html#veille">Veille</a></li>
                 </ul>
                 <ul class="icons">
                     <li><a href="">
@@ -54,20 +54,57 @@
                 <img src="static/shining.svg" class="star" alt="">
                 <img src="static/shining.svg" class="star star1" alt="">
                 <p>Ce projet avait pour but de relier un serveur linux ou l'on va récolter les logs d'un pc client à
-                    travers divers services notamment CRON et SSH les logs sont stockés sur un fichier gérer
-                    automatiquement tous les samedi et se supprime après une date de péremption défini.</p>
-                <img src="static/Windows-Server-Logo.png" alt="">
+                    travers le service Rsyslog. Les logs sont stockés en fonction de la configuration que l'on à mis
+                    dans les fichiers du service du serveur et du client.</p>
+                <img src="static/rsyslog-logo-512x512.png" alt="">
             </div>
             <div class="projetdescription">
-                <p>Nous avons installé deux machines Linux, une qui reçoit les logs en provenance de l’autre machine et
-                    une machine cliente sur laquelle on va ouvrir une porte pour communiquer avec les serveurs de logs.
-                </p>
-                <img src="static/Windows-Server-Logo.png" alt="">
-                <p>Avec le service Cron on peut automatiser ce que l’on veut comme la copie d’un fichier, sa suppression
-                    ou juste lancer la récolte de log via le lancement d’un script.</p>
-                <img src="static/Windows-Server-Logo.png" alt="">
-                <p>Nous avons ensuite configurer l’autre machine pour quel communique avec le serveur de log avec le
-                    fichier host.
+                <img src="static/shems.png" alt="">
+                <p>Pour ce faire, il a fallu que l’on modifie le fichier /etc/rsyslog.conf du serveur et du client afin de rajouter des lignes de configuration. <br>
+                    Coté serveur :
+                    En premier lieu j’ai décommenté les lignes <strong>“module(load=”imudp”) et input(type=”imudp” port=”514””</strong> pour ouvrir le port 514 utile à rsyslog. </p>
+                <img src="static/code.png" alt="">
+                <p>
+                    Coté client:
+                    Si jamais on ne voulait diriger que certains log sur le serveur comme les erreur de mail ou kernel nous avons à disposition des modules intégrés à rsyslog.
+                    <br><br>
+                    <strong class="red">auth</strong> : Utilisé pour des évènements concernant la sécurité ou l'authentification à travers des applications d'accès (type SSH)
+                    <br>
+                    <strong class="red">authpriv</strong> : Utilisé pour les messages relatifs au contrôle d'accès
+                    <br>
+                    <strong class="red">daemon</strong> : Utilisé par les différents processus systèmes et d'application
+                    <br>
+                    <strong class="red">kern</strong> : Utilisé pour les messages concernant le kernel
+                    <br>
+                    <strong class="red">mail</strong> : Utilisé pour les évènements des services mail
+                    <br>
+                    <strong class="red">user</strong> : module par défaut quand aucune n'est spécifiée
+                    <br>
+                    <strong class="red">local</strong> : Utilisé pour les messages du boot
+                    <br>
+                    <strong class="red">*</strong> : Désigne toutes les modules
+                    <br>
+                    <strong class="red">none</strong> : Désigne aucun module
+                    <br><br>
+                    En plus de précision, nous retrouvons pour chaque module un niveau de gravité
+                    <br><br>
+                    <strong class="green">Emerg</strong> : Urgence, système inutilisable
+                    <br>
+                    <strong class="green">Alerte</strong> : alerte Intervention immédiate nécessaire
+                    <br>
+                    <strong class="green">Crit</strong> : Erreur système critique
+                    <br>
+                    <strong class="green">Err</strong> : Erreur de fonctionnement
+                    <br>
+                    <strong class="green">Warning</strong> : Avertissement
+                    <br>
+                    <strong class="green">Notice</strong> : Évènement normaux devant être signalé
+                    <br>
+                    <strong class="green">Info</strong> : Pour information simple
+                    <br>
+                    <strong class="green">Debug</strong> : Message de débogage
+                    <br><br>
+                    Sachant que l’objectif était de tout regrouper dans un seul fichier la seul chose à faire était de rajouter une ligne à la fin du fichier rsyslog.conf -> *.* @IP_SRV:514
                 </p>
             </div>
         </div>

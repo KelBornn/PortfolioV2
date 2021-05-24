@@ -598,9 +598,21 @@ a:after {
 }
 
 .projetdescription img{
+    display: inherit;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
     width: 70%;
+    border-radius: 50px;
 }
 
+.red{
+    color: #810000;
+}
+
+.green{
+    color: #96bb7c;
+}
 @media(max-width: 728px) {
     .grid {
         display: block;
